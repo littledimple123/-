@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <script src="js/graphics.min.js"></script>
+</head>
+<body>
+<div id="stage-container" style="width: 400px; height: 375px;"></div>
+<script>
+    // create a stage for the Deathly Hallows symbol
+    stage = acgraph.create('stage-container');
+    // draw the square
+    stage.rect(25, 50, 350, 300);
+    // draw the circle
+    stage.circle(200, 250, 100);
+    // draw the triangle
+    stage.path()
+            .moveTo(25, 350)
+            .lineTo(200, 50)
+            .lineTo(375, 350)
+            .close();
+    // draw the wand in the middle
+    stage.path()
+            .moveTo(200, 50)
+            .lineTo(200, 350);
+</script>
+</body>
+</html>

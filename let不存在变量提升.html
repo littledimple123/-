@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>let不存在变量提升</title>
+</head>
+<body>
+<script src=''></script>
+<script>
+	console.log('ES5:');
+	var a=[];
+	for (var i = 0; i <10; i++) {
+		var c=i;
+		a[i]=function(){
+			console.log(c);
+		}
+
+	};
+	a[9]();//不管数组中的哪个都是9
+
+	
+</script>
+</body>
+</html>

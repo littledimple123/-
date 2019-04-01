@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+    <link rel="stylesheet" href="css/uploadify.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="uploadify/jquery.uploadify.min.js"></script>
+</head>
+<body>
+<form>
+    <div id="queue"></div>
+    <input id="file_upload" name="file_upload" type="file" multiple="true">
+</form>
+<script>
+    $(function(){
+        $('#file_upload').uploadify({
+            swf      : 'uploadify/uploadify.swf',
+            uploader : 'uploadify/uploadify.php',
+            buttonCursor: 'hand'
+
+        });
+    });
+</script>
+</body>
+</html>

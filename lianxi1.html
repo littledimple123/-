@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var name='a'
+	var obj={
+	    name:'b',
+	    fun:function(){
+	        alert(this.name)//b
+	        return function (){
+	            return this.name
+	        }
+	    }
+	}
+	var f=obj.fun();
+	alert(f());//a
+</script>
+</html>
