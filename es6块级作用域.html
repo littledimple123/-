@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ES5中 var 生命变量，会提升。
+        for (var i = 0; i < 10; i++) {
+            setTimeout(function() {
+                console.log(i)
+            }, 100)
+        }
+        //ES5修改变量提升，用匿名函数自调
+        for (var i = 0; i < 5; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    console.log(i)
+                }, 100)
+            })(i)
+        }
+
+        //ES6中let 块级作用域,{}就是一个块级作用域，for 循环除外，（）中也是一个块级作用域
+        for (let i = 0; i < 5; i++) {
+            setTimeout(function() {
+                console.log(i)
+            }, 100)
+        }
+    </script>
+</body>
+
+</html>
