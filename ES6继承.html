@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面向对象继承</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age
+            }
+            sayName() {
+                console.log(this.name)
+            }
+            sayAge() {
+                console.log(this.age)
+            }
+        }
+
+
+        class Sonperson extends Person {
+            constructor(name, age, sex) {
+                super(name, age)
+                this.sex = sex
+            }
+            showSex() {
+                console.log(this.sex)
+            }
+        }
+        var p1 = new Sonperson("张三", 50, '男')
+        p1.sayName()
+        p1.sayAge()
+        p1.showSex()
+    </script>
+</body>
+
+</html>
